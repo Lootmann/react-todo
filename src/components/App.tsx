@@ -1,13 +1,14 @@
 import React from "react";
 import "../styles/app.css";
 import { Form } from "./Form";
+import { Todo } from "./Todo";
 
 import { TodoModel } from "../models/TodoModel";
 
 export function App() {
   const [todos, setTodos] = React.useState<TodoModel[]>([]);
 
-  function showHoge(todoInput: string) {
+  function updateTodo(todoInput: string) {
     setTodos([...todos, new TodoModel(todoInput)]);
   }
 
@@ -16,17 +17,15 @@ export function App() {
       <header className="header">
         <p>Header - hoge</p>
 
-        <Form showHoge={showHoge} />
+        <Form updateTodo={updateTodo} />
       </header>
 
       <div className="todo-list">
+        {todos.length == 0 ? <h2>no toods</h2> : <h2>Todo List</h2>}
+
         <ul>
           {todos.map((todo) => {
-            return (
-              <li key={todo.id}>
-                {todo.id}. {todo.content}
-              </li>
-            );
+            return <Todo key={todo.id} todo={todo} />;
           })}
         </ul>
       </div>

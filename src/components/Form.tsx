@@ -4,10 +4,11 @@ import "../styles/form.css";
 export function Form(props: any) {
   const [todo, setTodo] = React.useState("");
 
+  // Lifting State Up
+  // this todo input goes to Parent(App.tsx) From this Form.tsx
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(todo);
-    props.showHoge(todo);
+    props.updateTodo(todo);
   }
 
   // controlled component
