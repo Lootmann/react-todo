@@ -1,21 +1,16 @@
 import React from "react";
 import "../styles/app.css";
+import { Button } from "./Button";
 
 export function App() {
   const [hoge, setHoge] = React.useState("hage");
-
-  function handleClick() {
-    setHoge(":^)");
-  }
 
   return (
     <div className="App">
       <header className="header">
         <p>Header - hoge</p>
 
-        <button onClick={handleClick} className="button">
-          Click ME!
-        </button>
+        <Button />
 
         <form action="" method="post">
           <input
