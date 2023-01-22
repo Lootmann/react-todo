@@ -1,0 +1,7 @@
+/* #input-form { } */
+
+#todo-input {
+  font-size: 22px;
+  padding: 3px 0px 3px 10px;
+  border-radius: 10px;
+}
