@@ -23,6 +23,7 @@ export function App() {
       <div id="todo-list">
         {todos.length == 0 ? <h2>no toods</h2> : <h2>Todo List</h2>}
 
+        {/* TODO: when clicks todo, delete this todo */}
         <ul>
           {todos.map((todo) => {
             return <Todo key={todo.id} todo={todo} />;
