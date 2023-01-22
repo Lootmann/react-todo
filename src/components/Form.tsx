@@ -9,6 +9,7 @@ export function Form(props: any) {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     props.updateTodo(todo);
+    setTodo("");
   }
 
   // controlled component
@@ -33,6 +34,7 @@ export function Form(props: any) {
           placeholder="input your todo"
           autoFocus
           onChange={(e) => handleChange(e)}
+          value={todo}
         />
       </form>
     </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/app.css";
+
 import { Form } from "./Form";
 import { Todo } from "./Todo";
-
 import { TodoModel } from "../models/TodoModel";
 
 export function App() {
@@ -10,6 +10,10 @@ export function App() {
 
   function updateTodo(todoInput: string) {
     setTodos([...todos, new TodoModel(todoInput)]);
+  }
+
+  function deleteTodo(todoId: number) {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== todoId));
   }
 
   return (
@@ -20,13 +24,18 @@ export function App() {
         <Form updateTodo={updateTodo} />
       </header>
 
-      <div id="todo-list">
-        {todos.length == 0 ? <h2>no toods</h2> : <h2>Todo List</h2>}
+      {todos.length === 0 ? <h2>no toods</h2> : <h2>Todo List</h2>}
 
-        {/* TODO: when clicks todo, delete this todo */}
+      <div id="todo-list">
         <ul>
           {todos.map((todo) => {
-            return <Todo key={todo.id} todo={todo} />;
+            return (
+              <Todo
+                key={todo.id}
+                todo={todo}
+                deleteTodo={() => deleteTodo(todo.id)}
+              />
+            );
           })}
         </ul>
       </div>

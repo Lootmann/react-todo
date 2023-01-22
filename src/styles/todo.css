@@ -1,0 +1,9 @@
+.todo {
+  font-size: 25px;
+  padding-left: 5px;
+  border-radius: 10px;
+}
+
+.todo:hover {
+  background-color: azure;
+}
