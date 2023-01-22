@@ -1,10 +1,18 @@
 import React from "react";
 import "../styles/form.css";
 
-export function Form() {
+export function Form(props: any) {
+  const [todo, setTodo] = React.useState("");
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log("YOU SUBMITTED DUMMIES");
+    console.log(todo);
+    props.showHoge(todo);
+  }
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    e.preventDefault();
+    setTodo(e.target.value);
   }
 
   return (
@@ -21,6 +29,7 @@ export function Form() {
           id="todo-input"
           placeholder="input your todo"
           autoFocus
+          onChange={(e) => handleChange(e)}
         />
       </form>
     </div>

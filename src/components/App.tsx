@@ -6,12 +6,17 @@ import { Form } from "./Form";
 export function App() {
   const [hoge, setHoge] = React.useState("hage");
 
+  function showHoge(todoInput: string) {
+    console.log(todoInput);
+    setHoge(todoInput);
+  }
+
   return (
     <div className="App">
       <header className="header">
         <p>Header - hoge</p>
 
-        <Form />
+        <Form showHoge={showHoge} />
       </header>
 
       <div className="test">
