@@ -4,10 +4,18 @@ import "../styles/app.css";
 export function App() {
   const [hoge, setHoge] = React.useState("hage");
 
+  function handleClick() {
+    setHoge(":^)");
+  }
+
   return (
     <div className="App">
       <header className="header">
         <p>Header - hoge</p>
+
+        <button onClick={handleClick} className="button">
+          Click ME!
+        </button>
 
         <form action="" method="post">
           <input
