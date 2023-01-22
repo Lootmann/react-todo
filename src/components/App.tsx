@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/app.css";
 
 export function App() {
+  const [hoge, setHoge] = React.useState("hage");
+
   return (
     <div className="App">
       <header className="header">
@@ -17,6 +19,15 @@ export function App() {
           />
         </form>
       </header>
+
+      <div className="todo-list">
+        <ul>
+          <li>{hoge}</li>
+          <li>todo</li>
+          <li>todo</li>
+          <li>todo</li>
+        </ul>
+      </div>
     </div>
   );
 }
