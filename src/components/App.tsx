@@ -1,31 +1,17 @@
 import React from "react";
 import "../styles/app.css";
 import { Button } from "./Button";
+import { Form } from "./Form";
 
 export function App() {
   const [hoge, setHoge] = React.useState("hage");
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setHoge("YOU SUBMIT DUMMIES");
-  }
 
   return (
     <div className="App">
       <header className="header">
         <p>Header - hoge</p>
 
-        <div className="input-form">
-          <form action="" method="post" onSubmit={(e) => handleSubmit(e)}>
-            <input
-              type="text"
-              name="todo"
-              id="todo-input"
-              placeholder="input your todo"
-              autoFocus
-            />
-          </form>
-        </div>
+        <Form />
       </header>
 
       <div className="test">
