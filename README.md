@@ -5,15 +5,18 @@
 とにかく簡単な Todo App<br>
 このアプリを通じて React の基礎をさっくとさらう<br>
 
-- Components
-- `React State`
-- `Props`: Passing Data
-- `Lifting State Up`: Passing Data from Child to Parent
-- Form
-- Event Handler
-- Immutablitity
-- `Function Based vs Class Based`: どうやら Function Based のおすすめのほうが優勢っぽい?
-- with ClassModel
+- [x] Components
+- [x] `React State`
+- [x] `Props`: Passing Data
+  - これは普通
+- [x] `Lifting State Up`: Passing Data from Child to Parent
+  - ややこしや ただどうにかできそう
+- [x] Form
+- [x] Event Handler
+- [x] Immutablitity
+  - いまいちわからんけどとにかく参照元は一切いじらず全部コピーして使えということ
+- [x] `Function Based vs Class Based`: どうやら Function Based のおすすめのほうが優勢っぽい?
+- [x] with ClassModel
 
 一日でできるくらいの規模で作成しろ<br>
 

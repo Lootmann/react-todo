@@ -13,3 +13,7 @@
   border-radius: 10px;
   padding: 5px;
 }
+
+#todo-list {
+  margin-left: 30px;
+}

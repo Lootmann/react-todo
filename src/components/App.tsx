@@ -20,7 +20,7 @@ export function App() {
         <Form updateTodo={updateTodo} />
       </header>
 
-      <div className="todo-list">
+      <div id="todo-list">
         {todos.length == 0 ? <h2>no toods</h2> : <h2>Todo List</h2>}
 
         <ul>
