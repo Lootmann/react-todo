@@ -1,5 +1,3 @@
-import React from "react";
-
 export class TodoModel {
   static autoincremrent: number = 0;
   id: number = 0;
