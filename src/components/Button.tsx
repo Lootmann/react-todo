@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/button.css";
 
-export function Button() {
-  return <button className="button">ClickMe!</button>;
+export function Button(props: { message: string }) {
+  return <button className="button">{props.message}</button>;
 }
