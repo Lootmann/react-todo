@@ -1,14 +1,12 @@
 import React from "react";
 import "../styles/app.css";
-import { Button } from "./Button";
 import { Form } from "./Form";
 
 export function App() {
-  const [hoge, setHoge] = React.useState("hage");
+  const [todos, setTodos] = React.useState<string[]>([]);
 
   function showHoge(todoInput: string) {
-    console.log(todoInput);
-    setHoge(todoInput);
+    setTodos([...todos, todoInput]);
   }
 
   return (
@@ -19,17 +17,11 @@ export function App() {
         <Form showHoge={showHoge} />
       </header>
 
-      <div className="test">
-        {/* component :^) */}
-        <Button message={"this message from Parent `App.tsx` :^)"} />
-      </div>
-
       <div className="todo-list">
         <ul>
-          <li>{hoge}</li>
-          <li>{hoge}</li>
-          <li>{hoge}</li>
-          <li>{hoge}</li>
+          {todos.map((todo, index) => {
+            return <li key={index}>{todo}</li>;
+          })}
         </ul>
       </div>
     </div>

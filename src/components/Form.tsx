@@ -10,6 +10,8 @@ export function Form(props: any) {
     props.showHoge(todo);
   }
 
+  // controlled component
+  // every input changes run this handleChange Function
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     e.preventDefault();
     setTodo(e.target.value);
